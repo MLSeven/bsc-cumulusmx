@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="<#location> weather data" />
+    <meta name="keywords" content="Cumulus, <#location> weather data, weather, data, weather station" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><#location> Main Page</title>
+    <link href="bsc/bscweatherstyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="bscpage">
+        <!-- BSC Logo -->
+        <div class="bsctitles">
+            <img class="bsclogo" src="bsc/bsclogotrans.png">
+            <h2>Budworth Mere Weather station</h2>
+            <p>Position <#latitude>:<#longitude> - <#altitude></p>
+        </div>
+        <div class="bscmenu">
+            <ul>
+                <li><a href="index.htm">Now</a></li>
+                <li><a href="mereview.htm">Wind Gauges</a></li>               
+                <li><a href="gauges.htm">All Gauges</a></li>
+                <li><a href="today.htm">Today</a></li>
+                <li><a href="history.htm">History</a></li>
+            </ul>
+        </div>
+        <div class="bsccontent">
+            <p>Welcome to the Budworth Mere Weather station. The station shows live wind and temperature readings at Budworth Mere</p>
+        </div>
+        <!-- Almanac -->
+        <div class="bsccontent">
+            <!-- Current Wind And Temperature -->
+            <table class="bsctable">
+                <caption>Readings are updated every <#interval> minutes </caption>
+                <thead>
+                    <tr>
+                        <th colspan="2">Observations @ <#time></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Observations</th>
+                        <th>Readings</th>
+                    </tr>
+                    <tr>
+                        <td>Wind&nbsp;Speed&nbsp;(gust)</td>
+                        <td><#wgust>&nbsp;<#windunit></td>
+                    </tr>
+                    <tr>
+                        <td>Wind&nbsp;Speed&nbsp;(avg)</td>
+                        <td><#wspeed>&nbsp;<#windunit></td>
+                    </tr>
+                    <tr>
+                        <td>Wind Bearing</td>
+                        <td><#avgbearing>&deg; <#wdir></td>
+                    </tr>
+                    <tr>
+                        <td>Beaufort&nbsp;<#beaufort></td>
+                        <td><#beaudesc></td>
+                    </tr>
+                    <tr>
+                        <td>Wind Bearing</td>
+                        <td><#avgbearing>&deg; <#wdir></td>
+                    </tr>
+                    <tr>
+                        <td>Wind Variation</td>
+                        <td>From <#BearingRangeFrom>&deg; To <#BearingRangeTo>&deg;</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td><#temp>&nbsp;<#tempunit></td>
+                    </tr>
+                    <tr>
+                        <td>Windchill</td>
+                        <td><#wchill>&nbsp;<#tempunit></td>
+                    </tr>
+                </tbody>
+
+                <!-- End Current Wind And Temperature -->
+                <tbody>
+                    <tr><th colspan="2">Almanac</th></tr>
+                    <tr>
+                        <td>Sunrise</td>
+                        <td><#sunrise></td>
+                    </tr>
+                    <tr>
+                        <td>Sunset</td>
+                        <td><#sunset></td>
+                    </tr>
+                    <tr>
+                        <td>Dawn</td>
+                        <td><#dawn></td>
+                    </tr>
+                    <tr>
+                        <td>Dusk</td>
+                        <td><#dusk></td>
+                    </tr>
+                    <tr>
+                        <td>Daylight</td>
+                        <td><#daylightlength></td>
+                    </tr>
+                    <tr>
+                        <td>Day Length</td>
+                        <td><#daylength></td>
+                    </tr>
+                    <tr>
+                        <td>Moonrise</td>
+                        <td><#moonrise></td>
+                    </tr>
+                    <tr>
+                        <td>Moonset</td>
+                        <td><#moonset></td>
+                    </tr>
+                    <tr>
+                        <td>Moonphase</td>
+                        <td><#moonphase></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- END Almanac -->
+        </div>
+        <!-- Standard Credits-->
+        <div class="credits">
+            <p>Page Updated <#update></p>
+            <p>powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank">CumulusMX</a> v<#version> (<#build>) </p>
+            <p>Budworth Sailing Club Mods SP 19/02/2020</p>
+        </div>
+    </div>
+</body>
+</html>

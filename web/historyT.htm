@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="<#location> weather history yesterday/month/year" />
+    <meta name="keywords" content="Cumulus, <#location> weather data, weather, data, weather station" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><#location> Historic Readings</title>
+    <link href="bsc/bscweatherstyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="bscpage">
+        <div class="bscpage">
+            <!-- BSC Logo -->
+            <div class="bsctitles">
+                <img class="bsclogo" src="bsc/bsclogotrans.png">
+                <h2>Budworth Mere Weather station</h2>
+                <p>Position <#latitude>:<#longitude> - <#altitude></p>
+            </div>
+            <div class="bscmenu">
+                <ul>
+                    <li><a href="index.htm">Now</a></li>
+                    <li><a href="mereview.htm">Wind Gauges</a></li>               
+                    <li><a href="gauges.htm">All Gauges</a></li>
+                    <li><a href="today.htm">Today</a></li>
+                    <li><a href="history.htm">History</a></li>
+                </ul>
+            </div>
+            <!-- This Months recorded Data-->
+            <div class="bsccontent">
+                <table class="bsctable">
+                    <caption>Summary of historic readings</caption>
+                    <thead>
+                        <tr>
+                            <th>Observation</th>
+                            <th>Readings</th>
+                            <th>Recorded</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">Yesterday&#39;s readings</th>
+                        </tr>
+                        <tr>
+                            <td>Highest Gust</td>
+                            <td><#wgustYM> <#windunit></td>
+                            <td>at <#TwgustYM></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Speed (10 minute average)</td>
+                            <td><#windYM> <#windunit> (<#Ybeaufort>)</td>
+                            <td>at <#TwindYM></td>
+                        </tr>
+                        <tr>
+                            <td>Wind Run</td>
+                            <td><#windrunY> <#windrununit></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>Dominant Direction</td>
+                            <td><#domwindbearingY>&deg; <#domwinddir></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>High Temperature</td>
+                            <td><#tempYH> <#tempunit></td>
+                            <td>at <#TtempYH> </td>
+                        </tr>
+                        <tr>
+                            <td>Low Temperature</td>
+                            <td><#tempYL> <#tempunit></td>
+                            <td>at <#TtempYL></td>
+                        </tr>
+                        <tr>
+                            <td>Temperature Range</td>
+                            <td><#temprangeY> <#tempunit></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>High Apparent Temperature</td>
+                            <td><#apptempYH> <#tempunit></td>
+                            <td>at <#TapptempYH> </td>
+                        </tr>
+                        <tr>
+                            <td>Low Apparent Temperature</td>
+                            <td><#apptempYL> <#tempunit></td>
+                            <td>at <#TapptempYL></td>
+                        </tr>
+                        <tr>
+                            <td>Low Wind Chill</td>
+                            <td><#wchillYL> <#tempunit></td>
+                            <td>at <#TwchillYL></td>
+                        </tr>
+                        <tr>
+                            <td>High Heat Index</td>
+                            <td><#heatindexYH> <#tempunit></td>
+                            <td>at <#TheatindexYH></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">This Month&#39;s readings</th>
+                        </tr>
+                        <tr>
+                            <td>Highest Wind Gust</td>
+                            <td><#MonthGustH> <#windunit></td>
+                            <td><#MonthGustHT> on <#MonthGustHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Wind Speed 10-minute Average</td>
+                            <td><#MonthWindH> <#windunit></td>
+                            <td><#MonthWindHT> on <#MonthWindHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Daily Wind Run</td>
+                            <td><#MonthWindRunH> <#windrununit></td>
+                            <td><#MonthWindRunHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Temperature</td>
+                            <td><#MonthTempH> <#tempunit></td>
+                            <td><#MonthTempHT> on <#MonthTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Temperature </td>
+                            <td><#MonthTempL> <#tempunit></td>
+                            <td><#MonthTempLT> on <#MonthTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Apparent Temperature</td>
+                            <td><#MonthAppTempH> <#tempunit></td>
+                            <td><#MonthAppTempHT> on <#MonthAppTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Apparent Temperature </td>
+                            <td><#MonthAppTempL> <#tempunit></td>
+                            <td><#MonthAppTempLT> on <#MonthAppTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Wind Chill Temperature</td>
+                            <td><#MonthWChillL> <#tempunit></td>
+                            <td><#MonthWChillLT> on <#MonthWChillLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Heat Index</td>
+                            <td><#MonthHeatIndexH> <#tempunit></td>
+                            <td><#MonthHeatIndexHT> on <#MonthHeatIndexHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Minimum</td>
+                            <td><#MonthMinTempH> <#tempunit></td>
+                            <td><#MonthMinTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Maximum</td>
+                            <td><#MonthMaxTempL> <#tempunit></td>
+                            <td><#MonthMaxTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Daily Range</td>
+                            <td><#MonthHighDailyTempRange> <#tempunit></td>
+                            <td><#MonthHighDailyTempRangeD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Daily Range</td>
+                            <td><#MonthLowDailyTempRange> <#tempunit></td>
+                            <td><#MonthLowDailyTempRangeD></td>
+                        </tr>
+                    </tbody>
+                    <!-- This year so far recorded Data-->
+                    <tbody>
+                        <tr>
+                            <th colspan="3">This Year&#39;s readings</th>
+                        </tr>
+                        <tr>
+                            <td>Highest Wind Gust</td>
+                            <td><#YearGustH> <#windunit></td>
+                            <td><#YearGustHT> on <#YearGustHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Wind Speed 10-minute Average</td>
+                            <td><#YearWindH> <#windunit></td>
+                            <td><#YearWindHT> on <#YearWindHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Daily Wind Run</td>
+                            <td><#YearWindRunH> <#windrununit></td>
+                            <td><#YearWindRunHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Temperature</td>
+                            <td><#YearTempH> <#tempunit></td>
+                            <td><#YearTempHT> on <#YearTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Temperature </td>
+                            <td><#YearTempL> <#tempunit></td>
+                            <td><#YearTempLT> on <#YearTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Apparent Temperature</td>
+                            <td><#YearAppTempH> <#tempunit></td>
+                            <td><#YearAppTempHT> on <#YearAppTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Apparent Temperature </td>
+                            <td><#YearAppTempL> <#tempunit></td>
+                            <td><#YearAppTempLT> on <#YearAppTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Wind Chill Temperature</td>
+                            <td><#YearWChillL> <#tempunit></td>
+                            <td><#YearWChillLT> on <#YearWChillLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Heat Index</td>
+                            <td><#YearHeatIndexH> <#tempunit></td>
+                            <td><#YearHeatIndexHT> on <#YearHeatIndexHD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Minimum</td>
+                            <td><#YearMinTempH> <#tempunit></td>
+                            <td><#YearMinTempHD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Maximum</td>
+                            <td><#YearMaxTempL> <#tempunit></td>
+                            <td><#YearMaxTempLD></td>
+                        </tr>
+                        <tr>
+                            <td>Highest Daily Range</td>
+                            <td><#YearHighDailyTempRange> <#tempunit></td>
+                            <td><#YearHighDailyTempRangeD></td>
+                        </tr>
+                        <tr>
+                            <td>Lowest Daily Range</td>
+                            <td><#YearLowDailyTempRange> <#tempunit></td>
+                            <td><#YearLowDailyTempRangeD></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- Standard Credits-->
+            <div class="credits">
+                <p>Page Updated <#update></p>
+                <p>powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank">CumulusMX</a> v<#version> (<#build>) </p>
+                <p>Budworth Sailing Club Mods SP 19/02/2020</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
